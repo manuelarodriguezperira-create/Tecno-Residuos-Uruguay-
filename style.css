@@ -1,0 +1,24 @@
+body {
+    background: rgb(0, 0, 0);
+}
+
+.barra {
+    width: 300px;
+    height: 20px;
+    border: 2px solid rgb(250, 251, 255);
+}
+
+.carga {
+    height: 100%;
+    background: rgb(0, 255, 0);
+    animation: cargar 3s infinite;
+}
+
+@keyframes cargar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
