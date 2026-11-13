@@ -1,24 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 body {
-    background: rgb(0, 0, 0);
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
-.barra {
-    width: 300px;
-    height: 20px;
-    border: 2px solid rgb(250, 251, 255);
+/* Navegación */
+.navegacion {
+    background-color: #0f5132;
+    color: white;
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.carga {
-    height: 100%;
-    background: rgb(0, 255, 0);
-    animation: cargar 3s infinite;
+.logo {
+    font-size: 1.3rem;
 }
 
-@keyframes cargar {
-    from {
-        width: 0%;
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #badbcc;
+}
+
+/* Portada */
+.portada {
+    background: linear-gradient(rgba(15, 81, 50, 0.85), rgba(45, 106, 79, 0.75)), 
+                url('https://images.unsplash.com/photo-1532996122724-e4b4979ff3e5?w=1200') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 5rem 5%;
+}
+
+.contenido-portada h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contenido-portada p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #212529;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #ffca2c;
+    transform: scale(1.05);
+}
+
+/* Secciones */
+.seccion {
+    padding: 3rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.seccion h2 {
+    color: #0f5132;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #badbcc;
+    padding-bottom: 0.5rem;
+}
+
+.seccion p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.fondo-claro {
+    background-color: #eaf4eb;
+}
+/* Campaña de concientización */
+#campana {
+    background-color: #eaf4eb;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Lista de acciones */
+.lista-acciones {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-acciones li {
+    background-color: white;
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    font-size: 1rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: #212529;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        text-align: center;
     }
-    to {
-        width: 100%;
+    .menu {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .contenido-portada h2 {
+        font-size: 1.5rem;
     }
 }
